@@ -77,19 +77,15 @@ Assets/Samples/texture/buildingTester_d.png
 텍스쳐는 아래와 같이 구성되어 있습니다.
 ![Texture](https://i.imgur.com/KOknmwQ.png)
 
-건물의 면이 Vector3.forward 기준으로 200도를 향하고 있다면 거실이라고 가정합니다.
 
-거실에 해당하는 면에는 1번 텍스쳐를 매핑합니다.
+텍스쳐 매핑은 다음과 같습니다.
 
-200도 계산시 +- 10% 정도의 오차를 허용합니다.
+1번(앞) : 정점의 normal과 Vector3.forward의 y축 각도가 180 <= n && n <= 220 에 해당하는 경우
 
-즉 정점의 normal 이 
+2번 : 1, 3을 제외한 모든 경우
 
-180 <= Vector3.forward 기준 y 축 각도 <= 220 에 해당하면 1번 텍스쳐를 매핑합니다.
+3번(위, 아래) : 정점의 normal이 Vector3.up || Vector3.down과 일치하는 경우
 
-건물의 위/아랫면 즉 정점의 normal 이 Vector3.up / Vector3.down 인 경우에는 3번 텍스쳐를 매핑합니다.
-
-그 외 면에는 2번 텍스쳐를 매핑합니다.
 
 텍스쳐 파일을 자르지 않고 한장으로 그려야합니다.
 
