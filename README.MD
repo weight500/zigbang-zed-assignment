@@ -80,11 +80,11 @@ Assets/Samples/texture/buildingTester_d.png
 
 텍스쳐 매핑은 다음과 같습니다.
 
-1번(앞) : 정점의 normal과 Vector3.forward의 y축 각도가 180 <= n && n <= 220 에 해당하는 경우
+1번(앞) : 정점의 normal과 Vector3.forward의 각도가 y축을 기준으로 180 <= n && n <= 220 에 해당하는 경우
 
 2번 : 1, 3을 제외한 모든 경우
 
-3번(위, 아래) : 정점의 normal이 Vector3.up || Vector3.down과 일치하는 경우
+3번(위, 아래) : 정점의 normal이 y축을 기준으로 Vector3.up || Vector3.down과 일치하는 경우
 
 
 텍스쳐 파일을 자르지 않고 한장으로 그려야합니다.
